@@ -12,7 +12,7 @@ var _backbone = require('backbone');
 var _backbone2 = _interopRequireDefault(_backbone);
 
 var CatModel = _backbone2['default'].Model.extend({
-  urlRoot: 'https://api.parse.com/1/classes/Assignment18',
+  urlRoot: 'https://api.parse.com/1/classes/Region',
 
   idAttribute: 'objectId'
 });
@@ -27,7 +27,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 function CatTemplate(data) {
-  return "\n  <li>" + date.Name + " is " + data.Age + " years/months old belongs to " + data.Affiliation + " Clan is " + data.Color + " color and was educated by " + data.Education + " </li>\n    ";
+  return "\n  <li>" + data.Name + " is " + data.Age + " years/months old belongs to " + data.Affiliation + " Clan is " + data.Color + " color and was educated by " + data.Education + " </li>\n    ";
 }
 exports["default"] = CatTemplate;
 module.exports = exports["default"];
@@ -54,7 +54,7 @@ var _cat_model2 = _interopRequireDefault(_cat_model);
 
 var CatsCollection = _backbone2['default'].Collection.extend({
 
-  url: 'https://api.parse.com/1/classes/Assignment18',
+  url: 'https://api.parse.com/1/classes/Region',
 
   model: _cat_model2['default'],
 
