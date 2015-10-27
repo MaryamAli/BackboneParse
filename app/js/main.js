@@ -12,7 +12,7 @@ var _backbone = require('backbone');
 var _backbone2 = _interopRequireDefault(_backbone);
 
 var CatModel = _backbone2['default'].Model.extend({
-  urlRoot: 'https://api.parse.com/classes/Region',
+  urlRoot: 'https://api.parse.com/1/classes/Assignment18',
 
   idAttribute: 'objectId'
 });
@@ -54,7 +54,7 @@ var _cat_model2 = _interopRequireDefault(_cat_model);
 
 var CatsCollection = _backbone2['default'].Collection.extend({
 
-  url: 'https://api.parse.com/classes/Region',
+  url: 'https://api.parse.com/1/classes/Assignment18',
 
   model: _cat_model2['default'],
 
@@ -83,13 +83,12 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _backbone = require('backbone');
-
-var _backbone2 = _interopRequireDefault(_backbone);
-
+// Import Backbone from 'backbone';
 // Import catTemplate from './catTemplate';
 // Import CatsCollection from './cats_collection';
 // Import CatModel from './CatModel';
+
+// Const cannot be changed
 
 var _cats_collection = require('./cats_collection');
 
@@ -131,9 +130,9 @@ function renderCats() {
     console.log('templateString', templateString);
 
     // create li node (DOM) from templateSTring
-    var $li = (0, _jquery2['default'])(templateString);
+    // let $li = $(templateString);
 
-    // let $li = CatTemplate(data);
+    var $li = (0, _cat_template2['default'])(data);
 
     // add to ul
     $ul.append($li);
@@ -145,13 +144,13 @@ function renderCats() {
 
 cats.fetch().then(renderCats);
 
-// Window.cats = cats;
-// Window.renderCats = renderCats;
+window.cats = cats;
+window.renderCats = renderCats;
 // Window.CatsCollection = CatsCollection;
 
 console.log('Hello, World');
 
-},{"./cat_template":2,"./cats_collection":3,"backbone":5,"jquery":6,"moment":7,"underscore":8}],5:[function(require,module,exports){
+},{"./cat_template":2,"./cats_collection":3,"jquery":6,"moment":7,"underscore":8}],5:[function(require,module,exports){
 (function (global){
 //     Backbone.js 1.2.3
 

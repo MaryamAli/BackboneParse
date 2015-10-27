@@ -1,17 +1,19 @@
 import $ from 'jquery';
 import _ from 'underscore';
 import moment from 'moment';
-import Backbone from 'backbone';
+// Import Backbone from 'backbone';
 // Import catTemplate from './catTemplate';
 // Import CatsCollection from './cats_collection';
 // Import CatModel from './CatModel';
+
+// Const cannot be changed 
 
 const APP_ID ='agyBBicntlORhkPegv1ES8rpcNTEE2qclq8333Wl';
 const API_KEY = 'WMfyy9mFvvS8j3AW7PLhuJMAf1yxKE7gw46nxe9I';
 
 $.ajaxSetup ({
   headers: {
-    'X-Parse-Application-Id': APP_ID ,
+    'X-Parse-Application-Id': APP_ID,
     'X-Parse-REST-API-Key': API_KEY
   }
 });
@@ -41,9 +43,9 @@ function renderCats() {
     console.log ('templateString', templateString);
 
     // create li node (DOM) from templateSTring
-    let $li = $(templateString);
+    // let $li = $(templateString);
 
-    // let $li = CatTemplate(data);
+    let $li = CatTemplate(data);
 
     // add to ul
     $ul.append($li);
@@ -57,8 +59,8 @@ function renderCats() {
 
 
 
-// Window.cats = cats;
-// Window.renderCats = renderCats;
+window.cats = cats;
+window.renderCats = renderCats;
 // Window.CatsCollection = CatsCollection;
 
 console.log('Hello, World');

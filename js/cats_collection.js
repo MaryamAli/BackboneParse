@@ -6,7 +6,7 @@ import CatModel from './cat_model';
 
 let CatsCollection = Backbone.Collection.extend ({
 
-  url: 'https://api.parse.com/1/classes/Region',
+  url: 'https://api.parse.com/1/classes/Assignment18',
 
   model: CatModel,
 
