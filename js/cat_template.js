@@ -1,6 +1,6 @@
 function CatTemplate (data) {
   return `
-  <li>${data.Name} is ${data.Age} years/months old belongs to ${data.Affiliation} Clan is ${data.Color} color and was educated by ${data.Education} </li>
+  <li><br>${data.Name} is ${data.Age} years/months old belongs to the Clan ${data.Affiliation}, is ${data.Color}, and was educated by ${data.Education}</li>
     `;
   }
     export default CatTemplate;
